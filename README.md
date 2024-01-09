@@ -48,3 +48,13 @@ download and run docker image which creates local server for the voicevox model
 used most lightweight model with least parameters i.e, 'tiny', so might be inaccurate
 
 future-dockerise this cause automation
+
+
+future2- you have to download any whisper model to run it
+better option using whisper docker container and requests from it
+clone this repo https://github.com/ahmetoner/whisper-asr-webservice
+and run this
+cmds
+
+        docker pull onerahmet/openai-whisper-asr-webservice:latest
+        docker run -d -p 9000:9000 -e ASR_MODEL=base onerahmet/openai-whisper-asr-webservice:latest
