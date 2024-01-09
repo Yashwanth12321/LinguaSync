@@ -23,7 +23,7 @@ gpu
 
 main file cmds
 
-    pip install pyaudio keyboard wave openai openai-whisper fsspec deep_translator
+    pip install pyaudio keyboard wave openai openai-whisper fsspec deep_translator requests time io json
 
     
 
