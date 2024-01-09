@@ -45,5 +45,6 @@ general libs:json,requests,io,time
 
 download and run docker image which creates local server for the voicevox model
     
+used most lightweight model with least parameters i.e, 'tiny', so might be inaccurate
 
 future-dockerise this cause automation
