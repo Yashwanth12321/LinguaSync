@@ -2,7 +2,7 @@
 Real-time voice to voice translater....
 
 
-locally installation
+local installation
 create virtual env for py  if you want many libs
 
 have docker in your systems
@@ -55,8 +55,7 @@ future-dockerise this cause automation
 
 future2- you have to download any whisper model to run it
 better option using whisper docker container and requests from it
-clone this repo https://github.com/ahmetoner/whisper-asr-webservice
-and run this
+run this
 cmds
 
         docker pull onerahmet/openai-whisper-asr-webservice:latest
