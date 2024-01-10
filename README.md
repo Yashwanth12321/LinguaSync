@@ -19,7 +19,10 @@ gpu
     
     
 
-        
+get whisperai repo
+cmd
+
+        pip install git+https://github.com/openai/whisper.git 
 
 main file cmds
 
