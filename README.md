@@ -1,62 +1,65 @@
+
 # LinguaSync
-Real-time voice to voice translater....
+
+English to japanese voice translater
 
 
-local installation
-create virtual env for py  if you want many libs
-
-have docker in your systems
-
-docker cmds
-cpu
-
-        docker pull voicevox/voicevox_engine:cpu-ubuntu20.04-latest
-        docker run --rm -p '127.0.0.1:50021:50021' voicevox/voicevox_engine:cpu-ubuntu20.04-latest
-gpu
-
-        docker pull voicevox/voicevox_engine:nvidia-ubuntu20.04-latest
-        docker run --rm --gpus all -p '127.0.0.1:50021:50021' voicevox/voicevox_engine:nvidia-ubuntu20.04-latest
-    
-    
-
-get whisperai repo
-cmd
-
-        pip install git+https://github.com/openai/whisper.git 
-
-main file cmds
-
-    pip install pyaudio keyboard wave openai openai-whisper fsspec deep_translator requests time io json
-
-    
-
-pip install {all the libs below}
-
-general libs:json,requests,io,time
-#tools needed
--speech to text
-
--libraries req:pyaudio,keyboard,wave,openai,whisper,openai-whisper,fsspec(important for sound conversion)
-    -whisperAI(speech to text)
--text translate
-    -lib: deep_translator
-    
--text to speech
-    voicevox api,
-    voicevox engine docker image running
 
 
-download and run docker image which creates local server for the voicevox model
-    
-used most lightweight model with least parameters i.e, 'tiny', so might be inaccurate
-
-future-dockerise this cause automation
 
 
-future2- you have to download any whisper model to run it
-better option using whisper docker container and requests from it
-run this
-cmds
+## Run Locally
 
-        docker pull onerahmet/openai-whisper-asr-webservice:latest
-        docker run -d -p 9000:9000 -e ASR_MODEL=base onerahmet/openai-whisper-asr-webservice:latest
+### requirements
+  -Docker
+
+Clone the project
+
+```bash
+  git clone https://github.com/Yashwanth12321/LinguaSync.git
+```
+
+Go to the project directory
+
+```bash
+  cd LinguaSync
+```
+
+Install dependencies
+
+    #### linux users- before proceeding run the following command(necessary for pyaudio lib to run)
+```bash
+    sudo apt-get install portaudio19-dev
+```
+install dependencies
+```bash
+    pip install -r requirements.txt
+    pip install fsspec
+```
+
+Pull the docker image
+```bash
+      docker pull voicevox/voicevox_engine:cpu-ubuntu20.04-latest
+```
+Run the docker image
+```bash
+      docker run --rm -p '127.0.0.1:50021:50021' voicevox/voicevox_engine:cpu-ubuntu20.04-latest
+```
+
+Install whisperai repo Locally
+```bash 
+      pip install git+https://github.com/openai/whisper.git 
+```
+
+Run
+```bash
+    python3 Linguasync.py
+```
+
+
+## Tech Stack
+
+**Client:** Python3
+
+**Server:** Voicevox docker image
+
