@@ -1,3 +1,6 @@
+# NOW DEPREICATED
+
+
 
 # LinguaSync
 
